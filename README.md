@@ -66,6 +66,8 @@ To run Cryptoverse locally, follow these steps:
 
 4. Open your browser and visit `http://localhost:3000` to access Cryptoverse.
 
+##deployment - https://cryptoverse-one-delta.vercel.app/
+
 ## Acknowledgments
 
 Cryptoverse utilizes various open-source libraries, APIs, and data sources. Special thanks to the developers and contributors of these projects for their valuable work.
