@@ -41,7 +41,7 @@ function Sidebar() {
 		<Layout.Sider
 			collapsible
 			collapsed={collapsed}
-			theme='dark'
+			theme='light'
 			width={300}
 			onCollapse={(value) => setCollapsed(value)}
 			breakpoint='md'
@@ -57,7 +57,7 @@ function Sidebar() {
 
 			<Menu
 				defaultSelectedKeys={[pathname]}
-				theme='dark'
+				theme='light'
 				mode='inline'
 				items={items}
 			/>
