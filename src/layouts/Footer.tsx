@@ -4,13 +4,13 @@ function Footer() {
 	return (
 		<Layout.Footer>
 			<div className='text-center '>
-				Cryptoverse ©2023 Created by{' '}
+				kudos to javascript mastery yt channel, developed by {' '}
 				<a
-					href='https://github.com/mohammed-Taysser/'
+					href='https://github.com/aditya0929'
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					Mohammed Taysser
+					aditya0929
 				</a>
 			</div>
 		</Layout.Footer>
