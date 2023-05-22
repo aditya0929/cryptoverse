@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nice-shadow {
+	box-shadow: 0 3px 15px rgba(22, 41, 124, 0.1);
+}
+
+:where(.css-dev-only-do-not-override-ph9edi).ant-statistic
+	.ant-statistic-content
+	.ant-statistic-content-prefix {
+	vertical-align: text-bottom;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- Document Title-->
+		<title>Cryptoverse | Homepage</title>
+		<!-- Set character encoding for the document-->
+		<meta charset="UTF-8" />
+		<!-- Meta Description-->
+		<meta name="description" content="Cryptoverse App powered by RapidAPI." />
+		<meta name="author" content="Mohammed Taysser" />
+		<meta name="keywords" content="" />
+
+		<!-- To run web application in full-screen-->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!-- Status Bar Style (see Supported Meta Tags below for available values)-->
+		<!-- Has no effect unless you have the previous meta tag-->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+		<!-- for IE-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- Viewport for responsive web design-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Recommended favicon format-->
+		<link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon.png" />
+		<link rel="mask-icon" href="%PUBLIC_URL%/favicon.png" color="#1677ff" />
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<meta name="theme-color" content="#1677ff" />
+
+		<style>
+			.loading-overlay {
+				position: fixed;
+				background: #fff;
+				width: 100%;
+				height: calc(100% + 90px);
+				z-index: 1040;
+				display: none;
+				margin-top: -90px;
+			}
+
+			.loading-container {
+				position: fixed;
+				top: 50%;
+				z-index: 1050;
+				text-align: center;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: none;
+			}
+
+			.loading-container .loader-body {
+				width: 48px;
+				height: 48px;
+				display: inline-block;
+				position: relative;
+				background: #1677ff;
+				box-sizing: border-box;
+				animation: flipX 1s linear infinite;
+			}
+
+			@keyframes flipX {
+				0% {
+					transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+				}
+
+				50% {
+					transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+				}
+
+				100% {
+					transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
+				}
+			}
+
+			body.load {
+				overflow: hidden;
+			}
+
+			body.load .loading-container,
+			body.load .loading-overlay {
+				display: block;
+			}
+
+		</style>
+	</head>
+
+	<body class="load">
+		<div class="loading-overlay"></div>
+		<div class="loading-container" id="js-loading-container">
+			<div class="loader-body"></div>
+		</div>
+
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<div id="root"></div>
+
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function () {
+					navigator.serviceWorker
+						.register('%PUBLIC_URL%/serviceWorker.js')
+						.then((res) => {
+							console.log('Service Worker successfully registered');
+						})
+						.catch((err) => {
+							console.log('Error registering service worker');
+							console.log(err);
+						});
+				});
+			}
+		</script>
+	</body>
+
+</html>
