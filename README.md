@@ -2,6 +2,8 @@
 
 tutorial is available on javascript mastery yt channel
 
+star my repo if you want :)
+
 Cryptoverse is a React TypeScript application that provides information about cryptocurrencies. It utilizes various libraries and dependencies to deliver a user-friendly and visually appealing interface for tracking and exploring the world of cryptocurrency
 
 I used create react-app for the project but with my previous experience I would suggest using VITE as it is fast enough
