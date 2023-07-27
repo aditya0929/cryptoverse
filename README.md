@@ -1,5 +1,5 @@
 # Cryptoverse
-# the bing news searc api has reached its maximum limit on free tier , so if you are actually calling it then it may not function . please add your own api key in the env file
+
 
 # Coinranking has no issues right now and it will function the same 
 
